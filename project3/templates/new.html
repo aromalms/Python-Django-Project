@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url('/mnt/data/f.jpg'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9); /* White with transparency */
+            border-radius: 10px;
+            padding: 30px;
+            width: 400px;
+            text-align: left;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e0e0e0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #003366; /* Dark blue */
+            margin-bottom: 20px;
+        }
+
+        label {
+            color: #003366; /* Dark blue for labels */
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: calc(100% - 20px); /* Full width minus padding */
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #003366; /* Dark blue border for inputs */
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #003366; /* Dark blue button */
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #002244; /* Darker blue on hover */
+        }
+
+        center {
+            margin-top: 50px;
+        }
+
+        hr {
+            border: 1px solid #003366;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="container">
+            <form method="POST" action="addreg">
+                {% csrf_token %}
+                <h1>SIGN UP</h1>
+                <hr>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" placeholder="Enter Phone Number" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter Password" required>
+
+                <input type="submit" value="Register">
+            </form>
+        </div>
+    </center>
+</body>
+</html>

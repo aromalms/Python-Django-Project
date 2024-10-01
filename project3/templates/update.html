@@ -1,0 +1,27 @@
+
+<center>
+    <form method="POST" action="addupdate/{{result.id}}">
+        {% csrf_token %}
+        <h1>Registration Form</h1><hr>
+        <br>
+        <label>Name:</label>
+        <input type="text" name="name" placeholder="Enter your name" value="{{result.name}}">
+        <br><br>
+
+        <label>Email:</label>
+            <input type="email" name="email" placeholder="example@gmail.com" value="{{result.email}}">
+            <br><br>
+        
+        <label>Phone Number:</label>
+        <input type="text" name="phone" placeholder="Enter Phone Number" value="{{result.phone}}">
+        <br><br>
+
+        <label>Password:</label>
+            <input type="password" name="password" placeholder="Enter Password" value="{{result.password}}">
+            <br><br>
+        
+            <input type="submit">
+    </form>
+</center>
+</body>
+</html>

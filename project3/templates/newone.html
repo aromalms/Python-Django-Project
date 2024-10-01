@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #007BFF; /* Solid blue background */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9); /* White with transparency */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            border: 2px solid #003366; /* Dark blue border */
+        }
+
+        h1 {
+            text-align: center;
+            color: #003366;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #003366; /* Dark blue for header */
+            color: white;
+            font-weight: bold;
+        }
+
+        td {
+            color: #333;
+            background-color: rgba(255, 255, 255, 0.9); /* Light white background */
+        }
+
+        tr:hover {
+            background-color: #f1f1f1; /* Light grey for hover */
+        }
+
+        span {
+            display: block;
+        }
+
+        /* Back Button Styling */
+        .back-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #003366; /* Dark blue */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #002244; /* Darker blue on hover */
+        }
+
+        /* Responsive Table */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            table, th, td {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>User Details</h1>
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Password</th>
+            </tr>
+            <tr>
+                <td><span>{{result.name}}</span></td>
+                <td><span>{{result.phone}}</span></td>
+                <td><span>{{result.email}}</span></td>
+                <td><span>{{result.password}}</span></td>
+            </tr>
+        </table>
+        
+        <!-- Back to Profile Button -->
+        <a href="profile" class="back-btn">Back to Profile</a>
+    </div>
+</body>
+</html>
