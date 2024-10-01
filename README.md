@@ -1,0 +1,1 @@
+This is a robust authentication system built with Python and Django, developed during my internship at NextGenPro. It includes user registration, login, logout, and password management features, designed for secure and efficient user handling.
